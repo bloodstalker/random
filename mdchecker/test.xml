@@ -60,7 +60,38 @@
   </PLANT>
   <PLANT>
     <COMMON>Liverleaf</COMMON>
-    <BOTANICAL><![CDATA[Hepatica americana]]></BOTANICAL>
+    <Description><![CDATA[
+# Hedering 1
+
+|**Index**|Alpha|**_Word_**|
+|-----|-----|----|
+|01|a|alpha|
+|02|b|bravo|
+|03|c|charlie|
+|04|d|delta|
+|05|e|echo|
+|06|f|foxtrot|
+|07|g|golf|
+|08|h|hotel|
+|09|i|india|
+|10|j|juliette|
+|11|k|kilo|
+|12|l|lima|
+|13|m|mike|
+|14|n|novembre|
+|15|o|oscar|
+|16|p|papa|
+|17|q|quebec|
+|18|r|romeo|
+|19|s|sierra|
+|20|t|tango|
+|21|u|uniform|
+|22|v|victor|
+|23|w|whiskey|
+|24|x|xray|
+|25|y|yankee|
+|26|z|zulu|
+      ]]></Description>
     <ZONE>4</ZONE>
     <LIGHT>Mostly Shady</LIGHT>
     <PRICE>$3.99</PRICE>
@@ -68,7 +99,20 @@
   </PLANT>
   <PLANT>
     <COMMON>Jack-In-The-Pulpit</COMMON>
-    <BOTANICAL><![CDATA[Arisaema triphyllum]]></BOTANICAL>
+    <Remark><![CDATA[
+* one
+* two
+* three
+* four
+* five
+  1. I
+  1. II
+  1. III
+
+Eins<br/>
+Zwei<br/>
+Drei<br/>
+      ]]></Remark>
     <ZONE>4</ZONE>
     <LIGHT>Mostly Shady</LIGHT>
     <PRICE>$3.23</PRICE>
@@ -76,7 +120,23 @@
   </PLANT>
   <PLANT>
     <COMMON>Mayapple</COMMON>
-    <BOTANICAL><![CDATA[Podophyllum peltatum]]></BOTANICAL>
+    <Postcondition><![CDATA[
+Podophyllum 
+
+```math
+
+This formula f(x) = x^2 is an example.
+
+```
+
+```math
+
+\sum_{i=1}^n
+
+```
+
+peltatum
+      ]]></Postcondition>
     <ZONE>3</ZONE>
     <LIGHT>Mostly Shady</LIGHT>
     <PRICE>$2.98</PRICE>
@@ -84,7 +144,7 @@
   </PLANT>
   <PLANT>
     <COMMON>Phlox, Woodland</COMMON>
-    <BOTANICAL>Phlox divaricata</BOTANICAL>
+    <Precondition><![CDATA[Phlox divaricata]]></Precondition>
     <ZONE>3</ZONE>
     <LIGHT>Sun or Shade</LIGHT>
     <PRICE>$2.80</PRICE>
