@@ -319,16 +319,19 @@ class StatementVisitor : public clang::ConstStmtVisitor<StatementVisitor> {
   public:
     StatementVisitor() = default;
 
-    void Visit(const Stmt* Node) {
+    bool Visit(const Stmt* Node) {
       ConstStmtVisitor<StatementVisitor>::Visit(Node);
+      return true;
     }
 
-    void VisitCallExpr(const CallExpr *Node) {
+    bool VisitCallExpr(const CallExpr *Node) {
       llvm::outs() << "visited a callexpr node\n";
+      return true;
     }
 
-    void VisitIfStmt(const IfStmt* Node) {
+    bool VisitIfStmt(const IfStmt* Node) {
       llvm::outs() << "visited an IfStmt\n";
+      return true;
     }
 };
 /**********************************************************************************************************************/
@@ -348,14 +351,19 @@ public:
     if (Body->child_begin() == Body->child_end()) return void();
 
     StatementVisitor SV;
-    SV.Visit(Body);
+    /* SV.Visit(Body); */
 
     for (auto &iter : Body->children()) {
-      //iter->dumpColor();
+      /* iter->dumpColor(); */
       clang::Stmt::StmtClass SC = iter->getStmtClass();
+
       if (clang::Stmt::StmtClass::CallExprClass == SC) {
-        auto ce = llvm::dyn_cast<CallExpr>(iter);
-        llvm::outs() << ce->getDirectCallee()->getNameAsString() << "\n";
+        const CallExpr *CE = llvm::dyn_cast<CallExpr>(iter);
+        llvm::outs() << CE->getDirectCallee()->getName().str() << "\t";
+        for (auto &&iter : CE->arguments()) {
+          llvm::outs() << Rewrite.getRewrittenText(iter->getSourceRange()) << "\t";
+        }
+        llvm::outs() << "\n";
       }
     }
   }

@@ -1,10 +1,4 @@
 #!/usr/bin/env node
-//npm install argparse
-//npm install jsdom
-//npm install markdown-it
-//npm install markdown-it-texmath
-//npm install katex
-//npm install markdown-it-multimd-table
 "use strict"
 const fs = require("fs")
 const jsdom = require("jsdom")
@@ -16,8 +10,8 @@ const mit = require("markdown-it")({html:true})
   .enable(["table"])
   .disable(["strikethrough"])
   .use(mitTexMath, {
-    engine: require("katex"), 
-    delimiters: "gitlab", 
+    engine: require("katex"),
+    delimiters: "gitlab",
     katexOptions: {macros: {"\\RR":"\\mathbb{R}"}}})
   .use(mitMulMd)
 
