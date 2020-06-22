@@ -58,9 +58,11 @@
     <PRICE>$4.45</PRICE>
     <AVAILABILITY>012699</AVAILABILITY>
   </PLANT>
-  <PLANT>
+  <Method>
+    <Identifier>whatever</Identifier>
     <COMMON>Liverleaf</COMMON>
-    <Description><![CDATA[
+    <Description>
+      <![CDATA[
 # Hedering 1
 
 |**Index**|Alpha|**_Word_**|
@@ -96,8 +98,9 @@
     <LIGHT>Mostly Shady</LIGHT>
     <PRICE>$3.99</PRICE>
     <AVAILABILITY>010299</AVAILABILITY>
-  </PLANT>
-  <PLANT>
+  </Method>
+  <Method>
+    <Identifier>yet another</Identifier>
     <COMMON>Jack-In-The-Pulpit</COMMON>
     <Remark><![CDATA[
 * one
@@ -117,8 +120,9 @@ Drei<br/>
     <LIGHT>Mostly Shady</LIGHT>
     <PRICE>$3.23</PRICE>
     <AVAILABILITY>020199</AVAILABILITY>
-  </PLANT>
-  <PLANT>
+  </Method>
+  <Method>
+    <Identifier>yolo</Identifier>
     <COMMON>Mayapple</COMMON>
     <Postcondition><![CDATA[
 Podophyllum 
@@ -141,15 +145,16 @@ peltatum
     <LIGHT>Mostly Shady</LIGHT>
     <PRICE>$2.98</PRICE>
     <AVAILABILITY>060599</AVAILABILITY>
-  </PLANT>
-  <PLANT>
+  </Method>
+  <Method>
+    <Identifier>gimme a break</Identifier>
     <COMMON>Phlox, Woodland</COMMON>
     <Precondition><![CDATA[Phlox divaricata]]></Precondition>
     <ZONE>3</ZONE>
     <LIGHT>Sun or Shade</LIGHT>
     <PRICE>$2.80</PRICE>
     <AVAILABILITY>012299</AVAILABILITY>
-  </PLANT>
+  </Method>
   <PLANT>
     <COMMON>Phlox, Blue</COMMON>
     <BOTANICAL>Phlox divaricata</BOTANICAL>
