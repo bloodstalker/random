@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 "use strict"
 const fs = require("fs")
+
 const jsdom = require("jsdom")
 const {JSDOM} = jsdom;
 
@@ -33,20 +34,18 @@ function mdchecker (){
 
   const domParser = new dom.window.DOMParser
   const doc = domParser.parseFromString(txt, 'text/xml')
-  const qResult = doc.querySelectorAll("Method").textContent
-  //console.log(doc.childNodes)
-  //console.log(qResult)
 
   const xmlSerialized = dom.serialize()
   const r = /\<Method\>(\s|\n)*?\<Identifier\>(?<identifier>.*)\<\/Identifier\>(.|\n)*?<(?<parent>.*)>(\s|\n)*\<\!\[CDATA\[(?<cdata>(.|\n?|(\r\n)?)*?)\]\]\>/g
   const matches = xmlSerialized.matchAll(r)
   for (let match of matches){
     let {identifier, parent, cdata} = match.groups
-    if (("Description" != parent) && ("Postcondition" != parent) && ("Precondition" != parent) && ("Remark" != parent)) {
+    if (("Description" != parent) && ("Postcondition" != parent) && ("Precondition" != parent)
+      && ("Remark" != parent) && ("Processing" != parent) && ("Remark" != parent)) {
       console.log("CDATA appears in illegal node type.")
       process.exit(1)
     } else {
-      console.log(identifier)
+      console.log("<p><b><i>",identifier, "<i><p><b>")
       const res = mit.render(cdata)
       console.log(res)
     }

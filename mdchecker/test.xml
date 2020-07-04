@@ -93,7 +93,8 @@
 |24|x|xray|
 |25|y|yankee|
 |26|z|zulu|
-      ]]></Description>
+        ]]>
+    </Description>
     <ZONE>4</ZONE>
     <LIGHT>Mostly Shady</LIGHT>
     <PRICE>$3.99</PRICE>
@@ -102,6 +103,10 @@
   <Method>
     <Identifier>yet another</Identifier>
     <COMMON>Jack-In-The-Pulpit</COMMON>
+    <justatag>
+      <Identifier>www</Identifier>
+      <Remark><![CDATA[just die]]></Remark>
+    </justatag>
     <Remark><![CDATA[
 * one
 * two
